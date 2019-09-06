@@ -5,9 +5,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 
 
-public  class Enemy extends Figure implements SettingEnemy {
+public  class Enemy extends Figure {
 
 	
 	String enemyType;
@@ -28,20 +29,39 @@ public  class Enemy extends Figure implements SettingEnemy {
 	}
 
 	
-	@Override
+	
 	public void GenerateEnemy() {
 		
+		
 
 		
 	}
 
-	@Override
+	
 	public void TowerEnemy() {
-		// TODO Auto-generated method stub
+		Enemy n=new Enemy(name, hpBase, strenghtBase, agilityBase, defenseBase, enemyType);
+		
+		/*Random r= new Random();
+		int rr=r.nextInt();	*/	
+		
+		 long rr=Math.round( Math.random() )  ;
+
+		
+		if (rr==0) {
+			setName("Il Conte Foggiano");
+			setHpBase(150);
+			setStrenghtBase(20);
+		} else {
+			setName("Giggino O'Bibbitaro");
+			setAgilityBase(70);
+		}
+		
+		
+		
 		
 	}
 
-	@Override
+	
 	public void EnemyDetail() {
 		System.out.println("nome:"+ getName()+"|"+ "hp: "+ getHpBase()+"|"+ "forza: "+getStrenghtBase()+"|"+
 				"agilit�: "+ getAgilityBase()+"|"+"difesa: " +getDefenseBase()+"\n");		
