@@ -3,7 +3,7 @@ package moppisgame.fv.TheMoppis;
 import java.util.Random;
 import java.util.Scanner;
 
-public  class Hero extends Figure implements SettingHero {
+public  class Hero extends Figure  {
 	
 	String type;
 	
@@ -22,7 +22,7 @@ public  class Hero extends Figure implements SettingHero {
 		this.type = type;
 	}
 
-	@Override
+	
 	public void Equip() {
 		
 		System.out.println("c-corazza, s=spada, p-pugnali");
@@ -52,7 +52,7 @@ public  class Hero extends Figure implements SettingHero {
 		}		
 	}
 
-	@Override
+	
 	public void AddBonus() {
 		Random r=new Random();
 		int result =r.nextInt(3)+1;
@@ -81,7 +81,7 @@ public  class Hero extends Figure implements SettingHero {
 		
 	}
 
-	@Override
+
 	public void HeroDetail() {
 		System.out.println("nome:"+ getName()+"|"+ "hp: "+ getHpBase()+"|"+ "forza: "+getStrenghtBase()+"|"+
 							"agilit�: "+ getAgilityBase()+"|"+"difesa: " +getDefenseBase()+"\n");

@@ -4,9 +4,10 @@ import java.util.*;
 import java.io.*;
 
 
-public class MainProva implements MiscWays  {
+public class MainProva  {
 
 	public static void main(String[] args)  {
 
+		
 	}
 }

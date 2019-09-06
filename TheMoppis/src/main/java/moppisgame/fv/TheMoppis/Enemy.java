@@ -30,35 +30,43 @@ public  class Enemy extends Figure {
 
 	
 	
-	public void GenerateEnemy() {
-		
-		
+	public void SwampEnemy() {
+		Enemy n=new Enemy(name, hpBase, strenghtBase, agilityBase, defenseBase, enemyType);
 
-		
+		long rr=Math.round( Math.random() )  ;
+
+		if (rr==0) {
+			setName("Renzeee");
+			setHpBase(90);
+			setStrenghtBase(65);
+			setEnemyType("swamp enemy");
+			
+		} else {
+			setName("Zyngaretty");
+			setAgilityBase(70);
+			setDefenseBase(70);
+			setEnemyType("swamp enemy");
+		}
 	}
 
 	
 	public void TowerEnemy() {
 		Enemy n=new Enemy(name, hpBase, strenghtBase, agilityBase, defenseBase, enemyType);
-		
-		/*Random r= new Random();
-		int rr=r.nextInt();	*/	
+
 		
 		 long rr=Math.round( Math.random() )  ;
 
-		
 		if (rr==0) {
 			setName("Il Conte Foggiano");
 			setHpBase(150);
 			setStrenghtBase(20);
+			setEnemyType("swamp enemy");
 		} else {
 			setName("Giggino O'Bibbitaro");
 			setAgilityBase(70);
+			setEnemyType("swamp enemy");
 		}
-		
-		
-		
-		
+
 	}
 
 	
